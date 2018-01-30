@@ -41,6 +41,12 @@
             top: 18px;
         }
 
+        .top-left {
+            position: absolute;
+            left: 10px;
+            top: 18px;
+        }
+
         .content {
             text-align: center;
         }
@@ -67,9 +73,16 @@
 </head>
 <body>
 <div class="flex-center position-ref full-height">
+    <div class="top-left links">
+        Air Map
+    </div>
+
     <div class="top-right links">
-        @auth
-            <a href="{{ url('/home') }}">Home</a>
+        @if (session('user'))
+            <a href="{{ url('/home') }}">
+                {{ session('user')->getName() }}
+                <img class="avatar" src="{{ session('user')->avatar }}"/>
+            </a>
         @else
             <a href="{{ url('login/github') }}">Login with GitHub</a>
         @endauth

@@ -8,9 +8,24 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+.links {
+  z-index: 2;
+  a {
+    padding: 0;
+  }
+  .avatar {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+}
+
+
 .air-map {
+  z-index: 1;
   position: fixed !important;
-  top: 0;
+  top: 54px;
   right: 0;
   bottom: 0;
   left: 0;
