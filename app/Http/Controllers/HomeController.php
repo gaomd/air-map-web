@@ -6,8 +6,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-//        var_dump(session('user'));
-
         if (!session('user')) {
             return redirect('login/choose');
         }

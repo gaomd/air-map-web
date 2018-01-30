@@ -38,6 +38,12 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function logout() {
+        session()->forget('user');
+
+        return redirect('/home');
+    }
+
     public function choose() {
         if (session('user')) {
             return redirect('/home');

@@ -12,17 +12,22 @@
 <body>
 <div class="flex-center position-ref full-height">
     <div class="top-left links">
-        Air Map
+        <a href="{{ url('/home') }}">Air Map</a>
     </div>
 
     <div class="top-right links">
         @if (session('user'))
             <a href="{{ url('/home') }}">
-                {{ session('user')->getName() }}
+{{--                {{ session('user')->getName() }}--}}
                 <img class="avatar" src="{{ session('user')->avatar }}"/>
+
+            </a>
+            &middot;
+            <a href="{{ url('/logout') }}">
+                Logout
             </a>
         @else
-            <a href="{{ url('login/github') }}">Login with GitHub</a>
+            <a href="{{ url('login/github') }}">Login via GitHub</a>
         @endauth
     </div>
 
