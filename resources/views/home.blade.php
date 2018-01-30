@@ -92,7 +92,7 @@
   var t = new Date().getTime();
   var waqiMapOverlay = new google.maps.ImageMapType({
     getTileUrl: function (coord, zoom) {
-      return 'https://tiles.waqi.info/tiles/usepa-aqi/' + zoom + "/" + coord.x + "/" + coord.y + ".png?token=EDITED_OUT_BEFORE_PUSH_TO_GITHUB";
+      return 'https://tiles.waqi.info/tiles/usepa-aqi/' + zoom + "/" + coord.x + "/" + coord.y + ".png?token={{ env('AQICN_TOKEN') }}";
     },
     name: "Air  Quality",
   });
