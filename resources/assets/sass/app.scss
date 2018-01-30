@@ -1,7 +1,5 @@
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -69,7 +67,6 @@ html, body {
   }
 }
 
-
 .air-map {
   z-index: 1;
   position: fixed !important;
@@ -84,12 +81,12 @@ html, body {
   display: inline-block;
   border-radius: 22px;
   padding: 0 20px;
-  &:hover {
+  &:hover,
+  &:active {
     color: #fff;
     text-decoration: none;
   }
 }
-
 
 .login-button--github {
   background: #24292e;

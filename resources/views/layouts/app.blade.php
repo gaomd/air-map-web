@@ -18,7 +18,7 @@
     <div class="top-right links">
         @if (session('user'))
             <a href="{{ url('/home') }}">
-{{--                {{ session('user')->getName() }}--}}
+                {{--                {{ session('user')->getName() }}--}}
                 <img class="avatar" src="{{ session('user')->avatar }}"/>
 
             </a>
@@ -36,22 +36,6 @@
     </div>
 </div>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
-<script>
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: new google.maps.LatLng(35.4896589, 118.321531),
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    zoom: 6
-  });
-
-  var t = new Date().getTime();
-  var waqiMapOverlay = new google.maps.ImageMapType({
-    getTileUrl: function (coord, zoom) {
-      return 'https://tiles.waqi.info/tiles/usepa-aqi/' + zoom + "/" + coord.x + "/" + coord.y + ".png?token={{ env('AQICN_TOKEN') }}";
-    },
-    name: "Air  Quality",
-  });
-
-  map.overlayMapTypes.insertAt(0, waqiMapOverlay);
-</script>
+<script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
