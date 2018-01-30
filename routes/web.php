@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('login/choose', 'Auth\LoginController@choose');
+
 Route::get('login/github', 'Auth\LoginController@redirectToProvider');
 
 Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');

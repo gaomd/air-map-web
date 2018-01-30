@@ -1,12 +1,61 @@
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Helvetica Neue", "PingFang SC", sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.top-left {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
 .links {
   z-index: 2;
@@ -29,4 +78,16 @@
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.login-button {
+  line-height: 44px;
+  display: inline-block;
+  border-radius: 22px;
+  padding: 0 20px;
+}
+
+.login-button--github {
+  background: #24292e;
+  color: #fff;
 }

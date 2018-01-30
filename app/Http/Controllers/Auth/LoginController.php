@@ -38,6 +38,14 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function choose() {
+        if (session('user')) {
+            return redirect('/home');
+        }
+
+        return view('auth.choose');
+    }
+
     /**
      * Redirect the user to the GitHub authentication page.
      *
